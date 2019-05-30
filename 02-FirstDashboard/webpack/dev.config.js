@@ -2,11 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: './src/index.js',
-  output: {
-    path: path.resolve(__dirname, './dist'),
-    publicPath: '/',
-    filename: 'bundle.js',
-  },
+  mode: 'development',
   optimization: {
     splitChunks: {
       chunks: 'all'
@@ -14,8 +10,8 @@ module.exports = {
   },
   resolve: {
     alias: {
-      Components: path.resolve(__dirname, './src/components/'),
-      Modules: path.resolve(__dirname, './src/modules/'),
+      Components: path.resolve(__dirname, '../src/components/'),
+      Modules: path.resolve(__dirname, '../src/modules/'),
     },
   },
   devServer: {
@@ -30,20 +26,24 @@ module.exports = {
       },
       {
         test: /\.scss$/,
+        exclude: /node_modules/,
         use: [
+          require.resolve('style-loader'),
           {
-            loader: 'style-loader',
+            loader: require.resolve('css-loader'),
+            options: {
+              localIdentName: '[path]__[name]__[local]--[hash:base64:5]',
+              modules: true,
+              camelCase: true
+            }
           },
           {
-            loader: 'css-loader',
-          },
-          {
-            loader: 'sass-loader',
-            // options: {
-            //  includePaths: ['absolute/path/a', 'absolute/path/b'],
-            // },
-          },
-        ],
+            loader: require.resolve('sass-loader'),
+            options: {
+              includePaths: ['node_modules', 'src']
+            }
+          }
+        ]
       },
     ],
   },
