@@ -1,0 +1,15 @@
+@import '~sanitize.css/sanitize.css';
+@import '~sanitize.css/typography.css';
+@import '~sanitize.css/forms.css';
+
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+@import './helpers';
+
+html,
+body {
+ font-family: 'Lato', sans-serif;
+ font-size: $font-size-base;
+ font-weight: $font-weight-base;
+ font-style: normal;
+}

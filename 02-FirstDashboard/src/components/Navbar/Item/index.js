@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './stylesNavbarItem.scss';
+import styles from './styles.scss';
 
 
 const NavbarItem = props => {

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import styles from './styles.scss';
 
-import NavbarItem from './NavbarItem';
+import NavbarItem from './Item';
 
 const Navbar = props => {
   const { children, ...other } = props;

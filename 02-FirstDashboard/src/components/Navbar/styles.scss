@@ -1,4 +1,25 @@
+@import 'assets/styles/helpers';
+
 .navbar {
   display: flex;
-  background-color:red;
+  background-color:yellow;
+
+  @include breakpoint (mobile) {
+    background-color:red;
+  }
+
+  @include breakpoint (tablet) {
+    background-color:green;
+  }
+
+  @include breakpoint (desktop) {
+    background-color:blue;
+  }
+
+  @include between-breakpoints(0, 1024px) {
+    background-color: purple
+  }
+
+  
+
 }
