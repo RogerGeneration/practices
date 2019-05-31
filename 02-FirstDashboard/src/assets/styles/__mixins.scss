@@ -49,8 +49,6 @@
 	}
 }
 
-
-
 @mixin between-breakpoints($min, $max) {
 	@media only screen and (min-width: $min) and (max-width: $max) {
 		@content;

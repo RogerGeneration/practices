@@ -1,13 +1,10 @@
 import React from 'react';
 
-import Navbar from 'Components/Navbar';
+import Dashboard from 'Modules/Dashboard';
 
 require('./assets/styles/main.scss');
 
 const App = () => (
-  <Navbar>
-    Soy una barra
-    <Navbar.Item>Soy un item</Navbar.Item>
-  </Navbar>
+  <Dashboard />
 );
 export default App;

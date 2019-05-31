@@ -4,13 +4,15 @@ import PropTypes from 'prop-types';
 import styles from './styles.scss';
 
 import NavbarItem from './Item';
+import NavbarBrand from './Brand';
 
 const Navbar = props => {
   const { children, ...other } = props;
-  console.log(styles);
   return (
     <div {...other} className={styles.navbar}>
-      {children}
+      <div className={styles.container}>
+        {children}
+      </div>
     </div>
   );
 };
@@ -20,5 +22,6 @@ Navbar.propTypes = {
 };
 
 Navbar.Item = NavbarItem;
+Navbar.Brand = NavbarBrand;
 
 export default Navbar;

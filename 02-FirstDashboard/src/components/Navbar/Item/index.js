@@ -7,7 +7,7 @@ import styles from './styles.scss';
 const NavbarItem = props => {
   const { children, ...other } = props;
   return (
-    <li {...other} className={styles.navbarItem}> {children}</li>
+    <div {...other} className={styles.navbarItem}> {children}</div>
   );
 };
 

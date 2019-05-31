@@ -1,4 +1,4 @@
-/*BREACK POINTS*/
+/*BREAK POINTS*/
 $bp-mobile: 320px;
 $bp-mobile-horizontal: 480px;
 $bp-tablet: 768px;
@@ -6,6 +6,21 @@ $bp-tablet-horizontal: 1024px;
 $bp-desktop: 1200px;
 $bp-desktop-wide: 1500px;
 
+/*CONTINER*/
+$container-max-widths: (
+  mobile: 100%,
+  mobile-horozontal: 100%,
+  tablet: 700px,
+  tablet-horizontal: 960px,
+  desktop: 1170px,
+  desktop-wide: 1440px
+);
+
 /* FONT */
 $font-size-base: 16px;
 $font-weight-base: 400;
+
+
+/* COLORS */
+$background-body: #F4F8F9;
+$background-navbar: #FFFFFF;

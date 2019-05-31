@@ -1,0 +1,26 @@
+.container{
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include breakpoint('tablet') {
+    max-width: get-container-max-widths('tablet');
+  }
+
+  @include breakpoint('tablet-horizontal') {
+    max-width: get-container-max-widths('tablet-horizontal');
+  }
+
+  @include breakpoint('desktop') {
+    max-width: get-container-max-widths('desktop');
+  }
+
+  @include breakpoint('desktop-wide') {
+    max-width: get-container-max-widths('desktop-wide');
+  }
+  
+}
