@@ -49,6 +49,28 @@ module.exports = {
           }
         ]
       },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name]-[hash:6].[ext]'
+            },
+          }
+        ]
+      },
+      {
+        test: /\.(png|jpg|jpeg|gif|ico|svg)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name]-[hash:6].[ext]'
+            },
+          }
+        ]
+      }
     ],
   },
   plugins: [
