@@ -10,9 +10,7 @@ const Navbar = props => {
   const { children, ...other } = props;
   return (
     <div {...other} className={styles.navbar}>
-      <div className={styles.container}>
-        {children}
-      </div>
+      <div className={styles.container}>{children}</div>
     </div>
   );
 };

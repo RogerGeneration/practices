@@ -21,6 +21,7 @@
         "exports": "only-multiline",
         "functions": "ignore"
       }
-    ]
+    ],
+    "space-before-function-paren": ["error", "always"]
   }
 }

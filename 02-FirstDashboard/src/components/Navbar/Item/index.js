@@ -3,11 +3,13 @@ import PropTypes from 'prop-types';
 
 import styles from './styles.scss';
 
-
 const NavbarItem = props => {
   const { children, ...other } = props;
   return (
-    <div {...other} className={styles.navbarItem}> {children}</div>
+    <div {...other} className={styles.navbarItem}>
+      {' '}
+      {children}
+    </div>
   );
 };
 
